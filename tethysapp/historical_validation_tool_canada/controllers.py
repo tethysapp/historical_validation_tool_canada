@@ -22,7 +22,6 @@ from dateutil.relativedelta import relativedelta
 
 from .app import HistoricalValidationToolCanada as app
 from HydroErr.HydroErr import metric_names, metric_abbr
-from hs_restclient import HydroShare, HydroShareAuthBasic
 
 import time
 
@@ -142,8 +141,6 @@ def get_popup_response(request):
             dataDischarge = map(float, dataDischarge)
 
         observed_df = pd.DataFrame(data=dataDischarge, index=datesDischarge, columns=['Observed Streamflow'])
-
-        #hs.setAccessRules(resource_id, public=False)
 
         observed_data_file_path = os.path.join(app.get_app_workspace().path, 'observed_data.json')
         observed_df.reset_index(level=0, inplace=True)

@@ -157,22 +157,4 @@ class HistoricalValidationToolCanada(TethysAppBase):
                 required=True,
                 default='north_america-geoglows',
             ),
-            CustomSetting(
-                name='hydroshare_resource_id',
-                type=CustomSetting.TYPE_STRING,
-                description='Hydroshare Resource ID',
-                required=True,
-            ),
-            CustomSetting(
-                name='username',
-                type=CustomSetting.TYPE_STRING,
-                description='Hydroshare Username',
-                required=True,
-            ),
-            CustomSetting(
-                name='password',
-                type=CustomSetting.TYPE_STRING,
-                description='Hydroshare Password',
-                required=True,
-            ),
         )
