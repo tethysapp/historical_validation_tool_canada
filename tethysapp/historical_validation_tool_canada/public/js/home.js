@@ -85,7 +85,7 @@ function init_map() {
 
 	var streams = new ol.layer.Image({
 		source: new ol.source.ImageWMS({
-			url: 'https://geoserver.hydroshare.org/geoserver/HS-a83f47af1439444396749535ddf15dc1/wms',
+			url: 'https://geoserver.hydroshare.org/geoserver/HS-97d4169fd7f54299aa9d60e61a56314f/wms',
 			params: { 'LAYERS': 'north_america-canada-geoglows-drainage_line' },
 			serverType: 'geoserver',
 			crossOrigin: 'Anonymous'
@@ -97,7 +97,7 @@ function init_map() {
 
 	var stations = new ol.layer.Image({
 		source: new ol.source.ImageWMS({
-			url: 'https://geoserver.hydroshare.org/geoserver/HS-a83f47af1439444396749535ddf15dc1/wms',
+			url: 'https://geoserver.hydroshare.org/geoserver/HS-97d4169fd7f54299aa9d60e61a56314f/wms',
 			params: { 'LAYERS': 'Selected_Statiions_Canada_Q' },
 			serverType: 'geoserver',
 			crossOrigin: 'Anonymous'
@@ -132,7 +132,7 @@ let capabilities = $.ajax(ajax_url, {
 	success: function() {
 		let x = capabilities.responseText
 		.split('<FeatureTypeList>')[1]
-		.split('HS-a83f47af1439444396749535ddf15dc1:Selected_Statiions_Canada_Q')[1]
+		.split('HS-97d4169fd7f54299aa9d60e61a56314f:Selected_Statiions_Canada_Q')[1]
 		.split('LatLongBoundingBox ')[1]
 		.split('/></FeatureType>')[0];
 
